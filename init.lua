@@ -1,6 +1,6 @@
 require 'core.keymaps'
 require 'core.options'
-require 'kickstart.health'
+require 'core.health'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -28,15 +28,11 @@ require('lazy').setup({
   require 'plugins.theme',
   require 'plugins.misc',
   require 'plugins.treesitter',
-  require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.lint',
-  require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-  -- require 'plugins.gitsigns',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'plugins.autopair',
-  -- require 'plugins.tree',
+  require 'plugins.debug',
+  require 'plugins.indent_line',
+  require 'plugins.lint',
+  require 'plugins.autopairs',
+  require 'plugins.gitsigns',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
