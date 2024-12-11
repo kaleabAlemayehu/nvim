@@ -5,7 +5,7 @@ require 'core.health'
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-  local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+  local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=sable', lazyrepo, lazypath }
   if vim.v.shell_error ~= 0 then
     error('Error cloning lazy.nvim:\n' .. out)
   end
@@ -22,7 +22,6 @@ require('lazy').setup({
   require 'plugins.whichkey',
   require 'plugins.telescope',
   require 'plugins.lsp',
-  require 'plugins.lualine',
   require 'plugins.autocompletion',
   require 'plugins.autoformat',
   require 'plugins.theme',
@@ -32,6 +31,8 @@ require('lazy').setup({
   require 'plugins.indent_line',
   require 'plugins.lint',
   require 'plugins.autopairs',
+  require 'plugins.noice',
+  require 'plugins.lualine',
   require 'plugins.gitsigns',
 }, {
   ui = {
