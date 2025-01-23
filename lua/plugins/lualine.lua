@@ -5,7 +5,8 @@ return {
     require('lualine').setup {
       options = {
         icons_enabled = true, -- Enable or disable icons in the statusline
-        theme = 'material-stealth', -- Set the colorscheme theme for lualine
+        -- theme = 'material-stealth', -- Set the colorscheme theme for lualine
+        theme = 'material', -- Set the colorscheme theme for lualine
         section_separators = { left = '', right = '' }, -- Section separator symbols
         component_separators = { left = '', right = '' }, -- Component separator symbols
         disabled_filetypes = { 'alpha', 'neo-tree' }, -- List of filetypes to disable lualine
@@ -57,6 +58,20 @@ return {
               return vim.fn.winwidth(0) > 100
             end,
           }, -- Show file encoding if window width > 100
+          {
+            'fileformat',
+            always_visible = true, -- Only show diagnostics when there is data
+            icons_enabled = true, -- Enable or disable icons in the statusline
+            symbols = {
+              unix = ' ', -- e712
+              dos = '', -- e70f
+              mac = '', -- e711
+            },
+            colored = true,
+            cond = function()
+              return vim.fn.winwidth(0) > 100
+            end,
+          }, -- Show file format if window width > 100
           {
             'filetype',
             cond = function()
