@@ -34,6 +34,7 @@ require('lazy').setup({
   require 'plugins.autopairs',
   require 'plugins.noice',
   require 'plugins.lualine',
+  require 'plugins.smearcursor',
   require 'plugins.gitsigns',
   require 'plugins.lazygit',
   require 'theme.material',
