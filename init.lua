@@ -35,6 +35,7 @@ require('lazy').setup({
   require 'plugins.noice',
   require 'plugins.lualine',
   require 'plugins.gitsigns',
+  require 'plugins.lazygit',
   require 'theme.material',
 }, {
   ui = {
