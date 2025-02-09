@@ -23,7 +23,6 @@ require('lazy').setup({
   require 'plugins.whichkey',
   require 'plugins.telescope',
   require 'plugins.lsp',
-  -- require 'plugins.image',
   require 'plugins.autocompletion',
   require 'plugins.autoformat',
   require 'plugins.misc',
@@ -35,9 +34,17 @@ require('lazy').setup({
   require 'plugins.noice',
   require 'plugins.lualine',
   require 'plugins.smearcursor',
+  -- require 'plugins.specs',
   require 'plugins.gitsigns',
   require 'plugins.lazygit',
   require 'theme.material',
+  {
+    dir = '~/Documents/klient.nvim/',
+    name = 'klient',
+    config = function()
+      require('klient').setup()
+    end,
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

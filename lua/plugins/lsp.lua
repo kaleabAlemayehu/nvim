@@ -26,6 +26,8 @@ return {
     { 'Bilal2453/luvit-meta', lazy = true },
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
+    { 'folke/lua-dev.nvim' },
+    { 'nvim-java/nvim-java' },
   },
   config = function()
     -- Brief aside: **What is LSP?**
